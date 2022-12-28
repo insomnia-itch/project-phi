@@ -256,6 +256,50 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &193778063
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 193778065}
+  - component: {fileID: 193778064}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &193778064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193778063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9e3a05970e768d439631896ee217073, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &193778065
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193778063}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.75015235, y: -3.9400792, z: -0.011766155}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &236678390
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,8 +613,8 @@ GameObject:
   - component: {fileID: 676417390}
   - component: {fileID: 676417389}
   - component: {fileID: 676417388}
-  - component: {fileID: 676417393}
   - component: {fileID: 676417392}
+  - component: {fileID: 676417394}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -587,7 +631,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 676417387}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 6ceb80ef87f3cc7478f569246e668b76, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -619,10 +663,10 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
+  m_GravityScale: 1.1
+  m_Material: {fileID: 6200000, guid: 6ceb80ef87f3cc7478f569246e668b76, type: 2}
+  m_Interpolate: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!212 &676417390
@@ -723,7 +767,7 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &676417393
+--- !u!114 &676417394
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -732,28 +776,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 676417387}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa91ea6b3c0c1754cb42180058da94cd, type: 3}
+  m_Script: {fileID: 11500000, guid: e8f8820d45159104a8b7f9d60cb725bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 10
-  runMaxSpeed: 12
-  runAccel: 1
-  runDeccel: 1
-  accelPower: 1.5
-  stopPower: 1.5
-  turnPower: 1.5
-  accelInAir: 0.5
-  deccelInAir: 0.5
   gravityScale: 1.1
   fallGravityMult: 1.35
   quickFallGravityMult: 2.2
   dragAmount: 0.22
   frictionAmount: 0.55
   coyoteTime: 0.1
+  runMaxSpeed: 9.5
+  runAccel: 9.3
+  runDeccel: 15
+  accelInAir: 0.65
+  deccelInAir: 0.65
+  accelPower: 1.05
+  stopPower: 1.23
+  turnPower: 1.13
   jumpForce: 12
   jumpCutMultiplier: 0.5
   jumpBufferTime: 0.08
-  wallJumpForce: {x: 0, y: 12}
+  wallJumpForce: {x: 9, y: 12}
   wallJumpRunLerp: 0.3
   wallJumpTime: 0.35
   slideAccel: 0.8
@@ -766,18 +809,8 @@ MonoBehaviour:
   dashUpEndMult: 0
   dashEndRunLerp: 0.3
   dashBufferTime: 0.05
-  doKeepRunMomentum: 0
+  doKeepRunMomentum: 1
   doTurnOnWallJump: 0
-  IsFacingRight: 0
-  IsJumping: 0
-  IsWallJumping: 0
-  IsDashing: 0
-  LastOnGroundTime: 0
-  LastOnWallTime: 0
-  LastOnWallRightTime: 0
-  LastOnWallLeftTime: 0
-  LastPressedJumpTime: 0
-  LastPressedDashTime: 0
   _groundCheckPoint: {fileID: 1260660134}
   _groundCheckSize: {x: 0.5, y: 0.01}
   _frontWallCheckPoint: {fileID: 1522539699}
@@ -786,7 +819,6 @@ MonoBehaviour:
   _groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  ClimbInput: 0
 --- !u!1 &977185992
 GameObject:
   m_ObjectHideFlags: 0
