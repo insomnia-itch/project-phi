@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 164626922}
   - component: {fileID: 164626923}
   - component: {fileID: 164626924}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: platform (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 236678392}
   - component: {fileID: 236678393}
   - component: {fileID: 236678394}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -785,7 +785,8 @@ MonoBehaviour:
   _wallCheckSize: {x: 0.2, y: 0.6}
   _groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
+  ClimbInput: 0
 --- !u!1 &977185992
 GameObject:
   m_ObjectHideFlags: 0
@@ -798,7 +799,7 @@ GameObject:
   - component: {fileID: 977185994}
   - component: {fileID: 977185995}
   - component: {fileID: 977185996}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: platform (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -931,7 +932,7 @@ GameObject:
   - component: {fileID: 1091358965}
   - component: {fileID: 1091358966}
   - component: {fileID: 1091358967}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: platform (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1061,7 +1062,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1104514574}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platforms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1132,7 +1133,7 @@ GameObject:
   - component: {fileID: 1408466167}
   - component: {fileID: 1408466168}
   - component: {fileID: 1408466169}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: platform (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1296,7 +1297,7 @@ GameObject:
   - component: {fileID: 1687703186}
   - component: {fileID: 1687703187}
   - component: {fileID: 1687703188}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: platform (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
